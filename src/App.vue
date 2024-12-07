@@ -319,12 +319,15 @@ provide('handleChangeType', handleChangeType)
         <span>Bocchi Monitor</span>
         <small style="font-weight: 400;opacity: .8"> ｜ 全球节点监控</small>
       </a>
-      <a-button class="theme-btn" :shape="'round'" @click="handleChangeDark">
+      <div>
+        <a class="bocchiweb" href="https://haruka.bocchi.ooo">Bocchi官网</a>
+        <a-button class="theme-btn" :shape="'round'" @click="handleChangeDark">
         <template #icon>
           <icon-sun-fill v-if="!dark" />
           <icon-moon-fill v-else />
         </template>
       </a-button>
+      </div>
     </div>
     <div class="area-tabs">
       <div class="area-tab-item" :class="selectArea === 'all' ? 'is-active' : ''" @click="handleSelectArea('all')">
@@ -550,6 +553,14 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  .bocchiweb {
+    color: #333333;
+    font-weight: 400;
+    opacity: 0.8;
+    font-size: 90%;
+    padding-right: 10px;
+  }
 
   .theme-btn {
     border: 1px solid #eeeeee!important;
