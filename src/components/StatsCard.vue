@@ -154,6 +154,9 @@ const { stats, type } = defineProps({
 }
 
 body[arco-theme='dark'] {
+  .hero-img {
+    opacity: 0.6;
+  }
   .hero-card {
     border: 2px solid rgb(255 255 255 / 16%);
     box-shadow: none;
