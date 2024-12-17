@@ -322,7 +322,7 @@ provide('handleChangeType', handleChangeType)
         </span>
         <small style="font-weight: 400;opacity: .8"> ｜ 全球节点监控</small>
       </a>
-      <div>
+      <div class="button">
         <a class="bocchiweb" href="https://haruka.bocchi.ooo">Bocchi官网</a>
         <a-button class="theme-btn" :shape="'round'" @click="handleChangeDark">
         <template #icon>
@@ -557,12 +557,17 @@ a {
   align-items: center;
   justify-content: space-between;
 
-  .bocchiweb {
-    color: #FFABBE;
-    font-weight: 700;
-    opacity: 0.8;
-    font-size: 90%;
-    padding-right: 10px;
+  .button {
+    display: flex;
+    align-items: center;
+    .bocchiweb {
+      vertical-align: middle;
+      color: #FFABBE;
+      font-weight: 700;
+      opacity: 0.8;
+      font-size: 90%;
+      padding-right: 10px;
+    }
   }
 
   .theme-btn {
