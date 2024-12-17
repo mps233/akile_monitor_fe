@@ -93,7 +93,7 @@ const { stats, type } = defineProps({
   .hero-img {
     position: absolute;
     right: 50px;
-    top: -70px;
+    top: -72px;
   }
 
   .hero-card {
