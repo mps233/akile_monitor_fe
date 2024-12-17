@@ -316,7 +316,10 @@ provide('handleChangeType', handleChangeType)
           <path data-v-2ee6cb6b="" fill-rule="evenodd" clip-rule="evenodd" d="M42.919 11.923L25 1.577a2 2 0 00-2 0L5.081 11.923a2 2 0 00-1 1.732v20.69a2 2 0 001 1.732L23 46.423a2 2 0 002 0l17.919-10.346a2 2 0 001-1.732v-20.69a2 2 0 00-1-1.732zM30.556 9.525L38.5 14 24 23l-13.808-8.668L17.5 10l6.5 4 6.556-4.475zM22 40.441V26.286L8 17.358v7.928l8 5.464v6.227l6 3.464zm10-3.464l-6 3.464V26.286l14-8.928v8.928l-8 5.464v5.227z" fill="currentColor"></path>
         </svg> -->
         <img class="bocchilogo" src="../public/bocchilogo.png" alt="">
-        <span>Bocchi Monitor</span>
+        <span>
+          <span class="bocchilogo-1">Bocchi</span>
+          Monitor
+        </span>
         <small style="font-weight: 400;opacity: .8"> ｜ 全球节点监控</small>
       </a>
       <div>
@@ -555,8 +558,8 @@ a {
   justify-content: space-between;
 
   .bocchiweb {
-    color: #333333;
-    font-weight: 400;
+    color: #FFABBE;
+    font-weight: 700;
     opacity: 0.8;
     font-size: 90%;
     padding-right: 10px;
@@ -821,6 +824,10 @@ a {
   .bocchilogo {
     width: 35px;
     padding-right: 5px;
+  }
+
+  .bocchilogo-1 {
+    background:linear-gradient(180deg, #ff5b81, #FFABBE);-webkit-background-clip:text;-webkit-text-fill-color:transparent;
   }
 
   .arco-icon {

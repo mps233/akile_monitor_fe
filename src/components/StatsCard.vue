@@ -56,7 +56,11 @@ const { stats, type } = defineProps({
       </a-col>
       <a-col :span="6" :xs="24" :sm="24" :md="6" :lg="6" :sl="6">
         <div class="hero-card">
-          <div class="title">网络情况</div>
+          <img class="hero-img" src="/public/bocchi.png" alt="">
+          <div class="title">
+            网络情况
+            <span class="norun">别跑了别跑了！ ๐·°(৹˃̵﹏˂̵৹)°·๐</span>
+          </div>
           <div class="value" style="display: block;">
             <div>
               流量
@@ -83,7 +87,14 @@ const { stats, type } = defineProps({
 
 <style scoped lang="scss">
 .hero {
+  position: relative;
   margin: 30px 10px 0px 10px;
+
+  .hero-img {
+    position: absolute;
+    right: 50px;
+    top: -70px;
+  }
 
   .hero-card {
     margin-bottom: 20px;
@@ -115,6 +126,12 @@ const { stats, type } = defineProps({
       font-size: 16px;
       font-weight: 500;
       margin-bottom: 14px;
+      .norun {
+        padding-left: 10px;
+        font-size: 12px;
+        font-weight: 200;
+        color: #fc7192;
+      }
     }
 
     .value {
