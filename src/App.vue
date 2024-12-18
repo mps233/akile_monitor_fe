@@ -598,8 +598,8 @@ a {
 
     &.is-active {
       background: #005fe710;
-      color: #054db4;
-      border: 1px solid #005fe7;
+      color: #469bb3;
+      border: 1px solid #7EBDCE;
     }
   }
 

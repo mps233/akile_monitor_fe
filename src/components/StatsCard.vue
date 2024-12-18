@@ -31,7 +31,7 @@ const { stats, type } = defineProps({
         <div class="hero-card all" :class="type === 'all' ? 'is-active' :''" @click="handleChangeType('all')">
           <div class="title">服务器总数</div>
           <div class="value">
-            <div class="status" style="background: #005fe7;"></div>
+            <div class="status" style="background: #7EBDCE;"></div>
             <span class="num">{{stats.total}} 台</span>
           </div>
         </div>
@@ -49,7 +49,7 @@ const { stats, type } = defineProps({
         <div class="hero-card offline" :class="type === 'offline' ? 'is-active' :''" @click="handleChangeType('offline')">
           <div class="title">离线服务器</div>
           <div class="value">
-            <div class="status" style="background: #b41616;"></div>
+            <div class="status" style="background: #FF5757;"></div>
             <span class="num">{{stats.offline}} 台</span>
           </div>
         </div>
@@ -64,11 +64,11 @@ const { stats, type } = defineProps({
           <div class="value" style="display: block;">
             <div>
               流量
-              <icon-arrow-up style="font-size: 14px;color: #d09453;" />
-              <span style="font-size: 14px;color: #d09453;"> {{formatBytes(stats.traffic_up)}}</span>
+              <icon-arrow-up style="font-size: 14px;color: #FFAE4F;" />
+              <span style="font-size: 14px;color: #FFAE4F;"> {{formatBytes(stats.traffic_up)}}</span>
               &nbsp;
-              <icon-arrow-down style="font-size: 14px;color: #9a5fcd;" />
-              <span style="font-size: 14px;color: #9a5fcd;">{{formatBytes(stats.traffic_down)}}</span>
+              <icon-arrow-down style="font-size: 14px;color: #7EBDCE;" />
+              <span style="font-size: 14px;color: #7EBDCE;">{{formatBytes(stats.traffic_down)}}</span>
             </div>
             <div>
               带宽
@@ -109,7 +109,7 @@ const { stats, type } = defineProps({
     &.is-active,
     &:hover {
       &.all {
-        border-color: #005fe7;
+        border-color: #7EBDCE;
       }
 
       &.online {
@@ -117,7 +117,7 @@ const { stats, type } = defineProps({
       }
 
       &.offline {
-        border-color: #b41616;
+        border-color: #FF5757;
       }
     }
 
