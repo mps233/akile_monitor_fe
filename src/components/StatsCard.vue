@@ -56,7 +56,7 @@ const { stats, type } = defineProps({
       </a-col>
       <a-col :span="6" :xs="24" :sm="24" :md="6" :lg="6" :sl="6">
         <div class="hero-card">
-          <img class="hero-img" src="/public/bocchi.png" alt="">
+          <img class="hero-img" src="/public/bocchi-face.png" alt="">
           <div class="title">
             网络情况
             <span class="norun">别跑了别跑了！ ๐·°(৹˃̵﹏˂̵৹)°·๐</span>
@@ -91,6 +91,7 @@ const { stats, type } = defineProps({
   margin: 30px 10px 0px 10px;
 
   .hero-img {
+    width: 100px;
     position: absolute;
     right: 50px;
     top: -72px;
