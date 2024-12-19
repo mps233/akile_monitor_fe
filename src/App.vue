@@ -323,7 +323,8 @@ provide('handleChangeType', handleChangeType)
         <small style="font-weight: 400;opacity: .8"> ｜ 全球节点监控</small>
       </a>
       <div class="button">
-        <a class="bocchiweb" href="https://haruka.bocchi.ooo">Bocchi官网</a>
+        <a class="bocchiweb" href="https://haruka.bocchi.ooo/login">登录</a>
+        <a class="bocchi-re" href="https://haruka.bocchi.ooo/register">注册Bocchi</a>
         <a-button class="theme-btn" :shape="'round'" @click="handleChangeDark">
         <template #icon>
           <icon-sun-fill v-if="!dark" />
@@ -560,13 +561,37 @@ a {
   .button {
     display: flex;
     align-items: center;
+    text-align: center;
     .bocchiweb {
       vertical-align: middle;
-      color: #FFABBE;
+      color: #ff5b81;
       font-weight: 700;
       opacity: 0.8;
       font-size: 90%;
       padding-right: 10px;
+    }
+    @media (max-width: 768px) {
+      .bocchiweb {
+        display: none; /* 隐藏 */
+      }
+    }
+    .bocchi-re {
+      display: inline-block;
+      vertical-align: middle;
+      color: #ffffff;
+      font-weight: 700;
+      opacity: 0.8;
+      font-size: 90%;
+      background-image: linear-gradient(120deg, #ff5b81, #FFABBE);
+      width: 90px;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 30px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .bocchi-re:hover {
+      background-image: linear-gradient(120deg, #ff3665, #FFABBE);
     }
   }
 
