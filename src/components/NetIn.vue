@@ -2,6 +2,9 @@
 import highcharts from 'highcharts'
 import moment from 'moment'
 import {inject, onMounted, ref, watch} from 'vue'
+import {useI18n} from "vue-i18n";
+
+const { t } = useI18n()
 
 const props = defineProps({
   data: {
@@ -13,7 +16,7 @@ const chartRef = ref()
 const chart = ref(null)
 
 const formatUnit = (value) => {
-  return '上传: ' + formatNetSize(value)
+  return t('chart-network-up')+': ' + formatNetSize(value)
 }
 const formatNetSize = (size) => {
   let num = size
@@ -128,7 +131,7 @@ defineExpose({
 </script>
 
 <template>
-  <div class="name">上传</div>
+  <div class="name">{{ $t('chart-network-up') }}</div>
   <div ref="chartRef" class="card-bg-chart"></div>
 </template>
 

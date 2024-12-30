@@ -29,37 +29,37 @@ const { stats, type } = defineProps({
     <a-row :gutter="20">
       <a-col :span="6" :xs="24" :sm="24" :md="6" :lg="6" :sl="6">
         <div class="hero-card all" :class="type === 'all' ? 'is-active' :''" @click="handleChangeType('all')">
-          <div class="title">服务器总数</div>
+          <div class="title">{{ $t('server-total') }}</div>
           <div class="value">
             <div class="status" style="background: #005fe7;"></div>
-            <span class="num">{{stats.total}} 台</span>
+            <span class="num">{{stats.total}} {{ $t('server-unit') }}</span>
           </div>
         </div>
       </a-col>
       <a-col :span="6" :xs="24" :sm="24" :md="6" :lg="6" :sl="6">
         <div class="hero-card online" :class="type === 'online' ? 'is-active' :''" @click="handleChangeType('online')">
-          <div class="title">在线服务器</div>
+          <div class="title">{{ $t('server-online') }}</div>
           <div class="value">
             <div class="status" style="background: #1fb416;"></div>
-            <span class="num">{{stats.online}} 台</span>
+            <span class="num">{{stats.online}} {{ $t('server-unit') }}</span>
           </div>
         </div>
       </a-col>
       <a-col :span="6" :xs="24" :sm="24" :md="6" :lg="6" :sl="6">
         <div class="hero-card offline" :class="type === 'offline' ? 'is-active' :''" @click="handleChangeType('offline')">
-          <div class="title">离线服务器</div>
+          <div class="title">{{ $t('server-offline') }}</div>
           <div class="value">
             <div class="status" style="background: #b41616;"></div>
-            <span class="num">{{stats.offline}} 台</span>
+            <span class="num">{{stats.offline}} {{ $t('server-unit') }}</span>
           </div>
         </div>
       </a-col>
       <a-col :span="6" :xs="24" :sm="24" :md="6" :lg="6" :sl="6">
         <div class="hero-card">
-          <div class="title">网络情况</div>
+          <div class="title">{{ $t('network-info') }}</div>
           <div class="value" style="display: block;">
             <div>
-              流量
+              {{ $t('traffic-info') }}
               <icon-arrow-up style="font-size: 14px;color: #d09453;" />
               <span style="font-size: 14px;color: #d09453;"> {{formatBytes(stats.traffic_up)}}</span>
               &nbsp;
@@ -67,7 +67,7 @@ const { stats, type } = defineProps({
               <span style="font-size: 14px;color: #9a5fcd;">{{formatBytes(stats.traffic_down)}}</span>
             </div>
             <div>
-              带宽
+              {{ $t('bandwidth-info') }}
               <icon-up-circle style="font-size: 14px;" />
               <span style="font-size: 14px;"> {{formatBandwithBytes(stats.bandwidth_up)}}</span>
               &nbsp;

@@ -2,7 +2,9 @@
 import highcharts from 'highcharts'
 import moment from 'moment'
 import {inject, onMounted, ref, watch} from 'vue'
+import {useI18n} from "vue-i18n";
 
+const { t } = useI18n()
 const props = defineProps({
   data: {
     type: Array
@@ -16,7 +18,7 @@ const chartRef = ref()
 const chart = ref(null)
 
 const formatUnit = (value) => {
-  return '内存: ' + formatMemSize(value)
+  return t('chart-memory')+': ' + formatMemSize(value)
 }
 const formatMemSize = (size) => {
   let num = size
@@ -162,7 +164,7 @@ defineExpose({
 </script>
 
 <template>
-  <div class="name">内存</div>
+  <div class="name">{{ $t('chart-memory') }}</div>
   <div ref="chartRef" class="card-bg-chart"></div>
 </template>
 
