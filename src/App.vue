@@ -369,15 +369,15 @@ provide('handleChangeType', handleChangeType)
           <a-progress class="monitor-item-progress" :status="progressStatus(item.State.MemUsed / item.Host.MemTotal * 100)" :percent="item.State.MemUsed / item.Host.MemTotal" :show-text="false" style="width: 60px" />
         </div>
         <div class="network">
-          <div class="monitor-item-title">网络速度(IN|OUT)</div>
-          <div class="monitor-item-value">{{`${formatBytes(item.State.NetInSpeed)}/s | ${formatBytes(item.State.NetOutSpeed)}/s`}}</div>
+          <div class="monitor-item-title">网络速度(↑|↓)</div>
+          <div class="monitor-item-value">{{`${formatBytes(item.State.NetOutSpeed)}/s | ${formatBytes(item.State.NetInSpeed)}/s`}}</div>
         </div>
         <div class="average">
           <div class="monitor-item-title">负载平均值(1|5|15)</div>
           <div class="monitor-item-value">{{`${item.State.Load1} | ${item.State.Load5} | ${item.State.Load15}`}}</div>
         </div>
         <div class="uptime" style="width: 120px;">
-          <div class="monitor-item-title">流量(IN+OUT)</div>
+          <div class="monitor-item-title">总流量</div>
           <div class="monitor-item-value">{{ formatBytes(item.State.NetOutTransfer + item.State.NetInTransfer) }}</div>
         </div>
         <div class="uptime">
