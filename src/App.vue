@@ -428,8 +428,8 @@ provide('handleChangeType', handleChangeType)
                   <div class="value">{{formatBytes(item.State.SwapUsed)}} / {{formatBytes(item.Host.SwapTotal)}}</div>
                 </div>
                 <div class="detail-item">
-                  <div class="name">网络速度（IN|OUT）</div>
-                  <div class="value">{{`${formatBytes(item.State.NetInSpeed)}/s | ${formatBytes(item.State.NetOutSpeed)}/s`}}</div>
+                  <div class="name">网络速度（上传|下载）</div>
+                  <div class="value">{{`${formatBytes(item.State.NetOutSpeed)}/s | ${formatBytes(item.State.NetInSpeed)}/s`}}</div>
                 </div>
                 <div class="detail-item">
                   <div class="name">负载平均值(1|5|15)</div>
@@ -446,6 +446,14 @@ provide('handleChangeType', handleChangeType)
                 <div class="detail-item">
                   <div class="name">上报时间</div>
                   <div class="value">{{formatTimeStamp(item.TimeStamp)}}</div>
+                </div>
+                <div class="detail-item">
+                    <div class="name">ip地址</div>
+                    <div class="value">
+                        <!-- 先打印原始数据 -->
+                        <div>Debug: {{JSON.stringify(item.Host.IP)}}</div>
+                        {{item.Host.IP ? item.Host.IP.join(', ') : '未获取到IP'}}
+                    </div>
                 </div>
                 <div class="detail-item" v-if="hostInfo[item.Host.Name] && hostInfo[item.Host.Name].seller">
                   <div class="name">商家名称</div>
